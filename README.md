@@ -37,7 +37,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+One challenge with creating this app came from using the blank activity.  Perhaps it's because of my recent IDE update, but I'm not used to having so much happening in my default XML files. Those same added features of the default layouts intermittently caused rendering problems in the IDE.
 
 ## License
 

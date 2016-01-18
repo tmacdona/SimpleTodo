@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,17 +10,94 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.codepath.simpletodo.EditItemActivity"
-    tools:showIn="@layout/activity_edit_item">
+    tools:showIn="@layout/activity_edit_item"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView"
+            android:layout_gravity="center_vertical"
+            android:textSize="24sp"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/priority_title" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/spinner"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Jan 1, 1970"
+            android:id="@+id/edit_date_button"
+            android:onClick="showDatePickerDialog"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:singleLine="false"
+            android:background="@android:drawable/alert_light_frame"
+            android:shadowColor="#fff5f5f5"
+            android:layout_weight=".5"
+            android:importantForAccessibility="yes"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="12:00 AM"
+            android:id="@+id/edit_time_button"
+            android:onClick="showTimePickerDialog"
+            android:layout_gravity="center"
+            android:singleLine="false"
+            android:background="@android:drawable/alert_light_frame"
+            android:shadowColor="#fff5f5f5"
+            android:layout_weight=".5"
+            android:importantForAccessibility="yes"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone" />
+    </LinearLayout>
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/address_editText"
+        android:gravity="top"
+        android:singleLine="true"
+        android:hint="@string/address_hint"
+        android:visibility="gone" />
+
+    <EditText
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etNewItem"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:minLines="15"
-        android:gravity="top" />
-</RelativeLayout>
+        android:minLines="10"
+        android:gravity="top"
+        android:hint="@string/message_hint" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/task_complete"
+        android:id="@+id/checkBox"
+        android:checked="false" />
+
+</LinearLayout>

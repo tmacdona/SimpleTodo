@@ -2,4 +2,38 @@
     <string name="app_name">SimpleTodo</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_edit_item">EditItemActivity</string>
+
+
+    <string name="priority_title">Priority</string>
+    <string name="do_date_title">Set Do Date</string>
+    <string name="do_time_title">Set Do Time</string>
+
+    <string name="today">Today</string>
+
+    <string name="low_priority">Low</string>
+    <string name="med_priority">Med</string>
+    <string name="high_priority">High</string>
+    <string name="auto">Authomatic</string>
+
+    <string name="address_hint">To:</string>
+    <string name="message_hint">Message</string>
+
+    <string name="date_format">MM-dd-yyyy</string>
+    <string name="twelve_hour_time_format">HH:mm a</string>
+
+    <string name="task_complete">Done</string>
+
+
+
+    <string-array name="array_of_priorities">
+        <item>@string/low_priority</item>
+        <item>@string/med_priority</item>
+        <item>@string/high_priority</item>
+    </string-array>
+
+    <string name="done_dialog">Have you completed this task?</string>
+
+    <string name="empty_list">Add an item to your ToDo list.</string>
+
+
 </resources>
